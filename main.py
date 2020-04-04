@@ -1,6 +1,6 @@
 import random
 
-guessesTaken = 0
+guessesTaken = 1
 minNumber = 1
 maxNumber = 20
 
@@ -13,7 +13,7 @@ print("Well, " + str(username) + ". I'm thinking in a number between " + str(min
 
 # Game's Loop
 print("I'm gonna take a guess: ")
-while guessesTaken < 6:
+while guessesTaken <= 6:
     guess = input()
     guess = int(guess)
 
@@ -27,6 +27,6 @@ while guessesTaken < 6:
     guessesTaken+= 1
 
 if guess == number:
-    print("Good Job." + username + ". You did it in " + str(guessesTaken) + ".")
+    print("Good Job." + username + ". You did it in " + str(guessesTaken) + " attempt.")
 else:
     print("Oh crap. The number was " + str(number))
